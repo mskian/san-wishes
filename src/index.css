@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 body {
   font-size: 16px;
   background-color: #1d3557;
   height: 100vh;
   color: rgba(0, 0, 0, 0.6);
-  font-family: 'Baloo Thambi 2', cursive;
+  font-family: 'Fira Code', monospace;
   font-weight: 600;
   line-height: 1.618;
 	-webkit-font-smoothing: antialiased;
@@ -36,7 +36,6 @@ h1, h2, h3, h4, h5, h6 {
     -o-hyphens: auto;
     hyphens: auto;
 }
-p,
 button,
 input,
 textarea,
@@ -57,7 +56,7 @@ a:hover, a:focus, a:active {
     color: #ffffff;
 }
 .notification {
-  background-color: #e4f89b;
+  background-color: #6930c3;
   color: rgb(29, 7, 7);
 }
 .read-more {
@@ -68,7 +67,6 @@ a:hover, a:focus, a:active {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 	border-radius: 30px;
 	padding: 35px;
-  padding-bottom: 18px;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased !important;
 	-moz-font-smoothing: antialiased !important;
@@ -77,9 +75,9 @@ a:hover, a:focus, a:active {
 .read-random {
 	display: flex;
 	flex-grow: 0.3;
-  font-family: 'Baloo Thambi 2', cursive;
+  font-family: 'Fira Code', monospace;
 	font-weight: 800;
-	font-size: 13px;
+	font-size: 14px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 	border-radius: 32px;
 	padding: 10px;
@@ -141,4 +139,45 @@ pre code {
 footer p {
     font-size: 15px;
     font-weight: 700;
+}
+.Toastify__toast {
+  font-family: 'Fira Code', monospace;
+}
+.Toastify__toast-container {
+  font-family: 'Fira Code', monospace;
+}
+.Toastify__toast--rtl {
+  font-family: 'Fira Code', monospace;
+}
+.Toastify__toast--dark {
+  font-family: 'Fira Code', monospace;
+}
+.Toastify__toast--default {
+  font-family: 'Fira Code', monospace;
+}
+.Toastify__toast--info {
+  font-family: 'Fira Code', monospace;
+}
+.Toastify__toast--success {
+  font-family: 'Fira Code', monospace;
+}
+.Toastify__toast--warning {
+  font-family: 'Fira Code', monospace;
+}
+.Toastify__toast--error {
+  font-family: 'Fira Code', monospace;
+}
+.Toastify__toast-body {
+  font-family: 'Fira Code', monospace;
+}
+p {
+  letter-spacing: .03em;
+  word-wrap: break-word;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  color: #ecfc09;
+  -moz-osx-font-smoothing: grayscale;
+ -webkit-font-smoothing: antialiased !important;
+ -moz-font-smoothing: antialiased !important;
+ text-rendering: optimizelegibility !important;
 }
