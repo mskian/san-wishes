@@ -69,23 +69,23 @@ class RetrieveList extends Component {
         </div>
         </Slide>
         <br />
-        <div class="buttons is-centered">
+        <div className="buttons is-centered">
         <ToastContainer />
-        <button className="button is-link read-random"  onClick={() => window.location.reload()}>Get My Wish</button>
-        <button className="button is-warning read-random" onClick={this.RefreshPage}>Thank you</button>
+        <button className="button is-link read-random"  onClick={() => window.location.reload()}>✨ Get My Wish</button>
+        <button className="button is-warning read-random" onClick={this.RefreshPage}>💚 Thank you</button>
         </div>
         <br />
-        <AudioPlayer autoPlay src="https://san-movies.b-cdn.net/videos/india-sg2.mp3" showSkipControls={true} showJumpControls={false} />
+        <AudioPlayer src="https://san-movies.b-cdn.net/videos/india-sg2.mp3" showJumpControls={false} />
         <br />
         <br />
         <hr />
-        <p class="has-text-success has-text-weight-bold has-text-centered">
+        <Fade>
+        <p className="has-text-success has-text-weight-bold has-text-centered">
           My Personal Wishing web page for Sharing My Greetings and Wishes Around the World - Built using React JS <br />
           <br />
-          <Fade>
           <img src="./react.png" loading="lazy" height="45" width="45" alt="San Wishes" />
-          </Fade>
         </p>
+        </Fade>
         <br />
         <br />
         </div>

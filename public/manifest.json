@@ -1,6 +1,7 @@
 {
   "short_name": "San Wishes",
   "name": "San Wishes",
+  "description": "San Wishes - A Simple Wishing site Built using React.",
   "icons": [
     {
       "src": "favicon.ico",
