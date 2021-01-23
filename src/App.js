@@ -47,6 +47,7 @@ class RetrieveList extends Component {
                 </h1>
               </Slide>
               <br />
+              <br />
               <Fade>
                 <Bounce>
                   <ReactCountryFlag
