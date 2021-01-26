@@ -2,13 +2,13 @@ import React, { Component } from "react"
 import axios from "axios"
 import "bulma/css/bulma.min.css"
 import "./index.css"
-import { Fade, Bounce, Slide } from "react-awesome-reveal"
-import ReactCountryFlag from "react-country-flag"
+import { Bounce, Slide } from "react-awesome-reveal"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import ReactFormInputValidation from "react-form-input-validation"
 import Typist from "react-typist"
 import slugify from "slugify"
+import { CopyToClipboard } from "react-copy-to-clipboard"
 
 class RetrieveList extends Component {
   constructor(props) {
@@ -24,12 +24,6 @@ class RetrieveList extends Component {
     this.form.useRules({
       name: "required",
     })
-  }
-  RefreshPage = () => {
-    this.PageToast()
-  }
-  Pagewish() {
-    window.location.reload()
   }
   componentDidMount() {
     if (document.getElementById("btnSignUp") != null) {
@@ -80,9 +74,9 @@ class RetrieveList extends Component {
     })
   }
   PageToast() {
-    toast.info("🦄 Welcome", {
+    toast.dark("🦄 Copied", {
       position: "top-right",
-      autoClose: 1000,
+      autoClose: 900,
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
@@ -93,15 +87,15 @@ class RetrieveList extends Component {
 
   render() {
     const wishername = this.state.persons.map(
-      person => "wishes from \n" + person.content
+      person => "💗 \n" + person.content + "\n 💗"
     )
-
     return (
       <section className="section">
         <div className="container content">
           <div className="columns is-centered">
             <div className="column is-half">
               <Slide triggerOnce>
+                <br />
                 <h1 className="title has-text-warning has-text-centered">
                   <Typist
                     avgTypingDelay={40}
@@ -109,46 +103,31 @@ class RetrieveList extends Component {
                     cursor={{ hideWhenDone: true }}
                   >
                     {" "}
-                    Happy Republic Day
+                    💛 Valentines day wishes 💛
                   </Typist>
                 </h1>
-                <p className="has-text-centered">{wishername}</p>
-              </Slide>
-              <br />
-              <Fade>
+                <br />
                 <Bounce>
-                  <ReactCountryFlag
-                    countryCode="in"
-                    svg
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                    }}
-                    title="India"
-                  />
+                  <p className="has-text-centered">{wishername}</p>
                 </Bounce>
-              </Fade>
+              </Slide>
               <br />
               <br />
               <Slide triggerOnce>
                 <div className="notification has-text-weight-bold read-more">
                   <p className="has-text-weight-bold has-text-left">
-                    We got our independence by losing many brave souls
+                    When we love 💚
                     <br />
                     <br />
-                    We got India fully republic by many efforts
+                    we always strive to become better than we are
                     <br />
                     <br />
-                    On this republic day let's salute to all of them
+                    When we strive to become better than we are
                     <br />
                     <br />
-                    Who served for the country
+                    everything around us becomes better too.
                     <br />
-                    <br />
-                    And never forget their sacrifices
-                    <br />
-                    <br />
-                    Happy Republic Day 2021 🇮🇳
+                    <br />I Love You 💗
                   </p>
                 </div>
               </Slide>
@@ -156,7 +135,11 @@ class RetrieveList extends Component {
               <br />
               <div className="notification is-warning has-text-weight-bold">
                 <br />
-                <h4 className="has-text-centered">Create your Own 🍔</h4>
+                <h3 className="has-text-centered">Create your Own 🍔</h3>
+                <div className="has-text-centered">
+                  <small>Enter his or Her Name</small>
+                </div>
+                <br />
                 <form onSubmit={this.form.handleSubmit}>
                   <div className="control">
                     <input
@@ -188,12 +171,18 @@ class RetrieveList extends Component {
               <br />
               <div className="buttons is-centered">
                 <ToastContainer />
-                <button
-                  className="button is-link read-random"
-                  onClick={this.RefreshPage}
+                <CopyToClipboard
+                  text={window.location.href}
+                  onCopy={() => this.setState({ copied: true })}
                 >
-                  💚 Thank you
-                </button>
+                  <button
+                    className="button is-link read-random"
+                    onClick={this.PageToast}
+                    disabled={this.state.isLoading}
+                  >
+                    📝 Copy URL
+                  </button>
+                </CopyToClipboard>
               </div>
               <br />
               <br />
