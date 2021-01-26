@@ -14,7 +14,14 @@ This is My Personal Wishing Site - Share the Festival Wishes via Web link
 - PWA
 - Offline Suppport
 - Bulma CSS
+- Festival Wishing Name Generator API
 - Power Packed with React Modules
+
+## API 🍪
+
+We have Sperate API for Name Generate with Safe Slugs
+
+For more at - <https://github.com/mskian/get-user>  
 
 ## Installation 📦
 
