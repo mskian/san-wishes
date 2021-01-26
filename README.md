@@ -21,7 +21,7 @@ This is My Personal Wishing Site - Share the Festival Wishes via Web link
 
 We have Sperate API for Name Generate with Safe Slugs
 
-For more at - <https://github.com/mskian/get-user>  
+For more at - <https://github.com/mskian/get-user>
 
 ## Installation 📦
 

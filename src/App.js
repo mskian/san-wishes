@@ -38,6 +38,15 @@ class RetrieveList extends Component {
         /* eslint eqeqeq: 0 */
         if (name == 0) {
           console.log("Empty Title or Message")
+          toast.error("🤖 Empty Name", {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          })
           return false
         }
         //const users = encodeURIComponent(name)
@@ -56,6 +65,15 @@ class RetrieveList extends Component {
       if (wishes[0].content === "null") {
         console.log("no data")
       } else {
+        toast.success("🦄 \n" + wishes[0].content, {
+          position: "top-right",
+          autoClose: 2500,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        })
         console.log(wishes[0].content)
         this.setState({ persons: wishes })
       }
@@ -63,8 +81,8 @@ class RetrieveList extends Component {
   }
   PageToast() {
     toast.info("🦄 Welcome", {
-      position: "top-center",
-      autoClose: 5000,
+      position: "top-right",
+      autoClose: 1000,
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
@@ -138,6 +156,7 @@ class RetrieveList extends Component {
               <br />
               <div className="notification is-warning has-text-weight-bold">
                 <br />
+                <h4 className="has-text-centered">Create your Own 🍔</h4>
                 <form onSubmit={this.form.handleSubmit}>
                   <div className="control">
                     <input
