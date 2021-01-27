@@ -2,13 +2,14 @@ import React, { Component } from "react"
 import axios from "axios"
 import "bulma/css/bulma.min.css"
 import "./index.css"
-import { Bounce, Slide } from "react-awesome-reveal"
+import { Fade, Bounce, Slide } from "react-awesome-reveal"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import ReactFormInputValidation from "react-form-input-validation"
 import Typist from "react-typist"
 import slugify from "slugify"
 import { CopyToClipboard } from "react-copy-to-clipboard"
+import MetaTags from "react-meta-tags"
 
 class RetrieveList extends Component {
   constructor(props) {
@@ -91,19 +92,37 @@ class RetrieveList extends Component {
     )
     return (
       <section className="section">
+        <MetaTags>
+          <title>{`${wishername + " Valentines day wishes For you 💗"}`}</title>
+          <meta
+            property="og:title"
+            content={`${wishername + " Valentines day wishes For you 💗"}`}
+          />
+          <meta
+            property="og:site_name"
+            content={`${wishername + " Valentines day wishes For you 💗"}`}
+          />
+          <meta
+            name="twitter:title"
+            content={`${wishername + " Valentines day wishes For you 💗"}`}
+          />
+          <link rel="canonical" href={window.location.href} />
+          <meta name="twitter:url" content={window.location.href} />
+          <meta property="og:url" content={window.location.href} />
+        </MetaTags>
         <div className="container content">
           <div className="columns is-centered">
             <div className="column is-half">
               <Slide triggerOnce>
                 <br />
-                <h1 className="title has-text-warning has-text-centered">
+                <h1 className="title is-5 has-text-warning has-text-centered">
                   <Typist
                     avgTypingDelay={40}
                     startDelay={1800}
                     cursor={{ hideWhenDone: true }}
                   >
                     {" "}
-                    💛 Valentines day wishes 💛
+                    Valentines day wishes 💛
                   </Typist>
                 </h1>
                 <br />
@@ -112,6 +131,11 @@ class RetrieveList extends Component {
                 </Bounce>
               </Slide>
               <br />
+              <Slide triggerOnce>
+                <Fade>
+                  <img src="./couple.svg" alt="San Wishes" loading="lazy"></img>
+                </Fade>
+              </Slide>
               <br />
               <Slide triggerOnce>
                 <div className="notification has-text-weight-bold read-more">
