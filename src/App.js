@@ -9,7 +9,7 @@ import ReactFormInputValidation from "react-form-input-validation"
 import Typist from "react-typist"
 import slugify from "slugify"
 import { CopyToClipboard } from "react-copy-to-clipboard"
-import MetaTags from "react-meta-tags"
+import { Helmet, HelmetProvider } from "react-helmet-async"
 
 class RetrieveList extends Component {
   constructor(props) {
@@ -92,24 +92,28 @@ class RetrieveList extends Component {
     )
     return (
       <section className="section">
-        <MetaTags>
-          <title>{`${wishername + " Valentines day wishes For you 💗"}`}</title>
-          <meta
-            property="og:title"
-            content={`${wishername + " Valentines day wishes For you 💗"}`}
-          />
-          <meta
-            property="og:site_name"
-            content={`${wishername + " Valentines day wishes For you 💗"}`}
-          />
-          <meta
-            name="twitter:title"
-            content={`${wishername + " Valentines day wishes For you 💗"}`}
-          />
-          <link rel="canonical" href={window.location.href} />
-          <meta name="twitter:url" content={window.location.href} />
-          <meta property="og:url" content={window.location.href} />
-        </MetaTags>
+        <HelmetProvider>
+          <Helmet>
+            <title>{`${
+              wishername + " Valentines day wishes For you 💗"
+            }`}</title>
+            <meta
+              property="og:title"
+              content={`${wishername + " Valentines day wishes For you 💗"}`}
+            />
+            <meta
+              property="og:site_name"
+              content={`${wishername + " Valentines day wishes For you 💗"}`}
+            />
+            <meta
+              name="twitter:title"
+              content={`${wishername + " Valentines day wishes For you 💗"}`}
+            />
+            <link rel="canonical" href={window.location.href} />
+            <meta name="twitter:url" content={window.location.href} />
+            <meta property="og:url" content={window.location.href} />
+          </Helmet>
+        </HelmetProvider>
         <div className="container content">
           <div className="columns is-centered">
             <div className="column is-half">
