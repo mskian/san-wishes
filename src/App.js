@@ -41,7 +41,7 @@ class RetrieveList extends Component {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            closeButton: false
+            closeButton: false,
           })
           return false
         }
@@ -69,7 +69,7 @@ class RetrieveList extends Component {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          closeButton: false
+          closeButton: false,
         })
         console.log(wishes[0].content)
         this.setState({ persons: wishes })
@@ -85,8 +85,7 @@ class RetrieveList extends Component {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      closeButton: false
-      
+      closeButton: false,
     })
   }
 
