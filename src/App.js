@@ -58,9 +58,6 @@ class RetrieveList extends Component {
     const GET_USER = new URL(window.location.href).searchParams.get("name")
     axios.get("https://wishes-five.vercel.app/" + GET_USER).then(res => {
       const wishes = res.data
-      if (wishes[0].content === "null") {
-        console.log("no data")
-      } else {
         toast.success("😊 \n" + wishes[0].content, {
           position: "top-right",
           autoClose: 2500,
@@ -73,7 +70,6 @@ class RetrieveList extends Component {
         })
         console.log(wishes[0].content)
         this.setState({ persons: wishes })
-      }
     })
   }
   PageToast() {
