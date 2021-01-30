@@ -41,6 +41,7 @@ class RetrieveList extends Component {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
+            closeButton: false
           })
           return false
         }
@@ -60,7 +61,7 @@ class RetrieveList extends Component {
       if (wishes[0].content === "null") {
         console.log("no data")
       } else {
-        toast.success("🦄 \n" + wishes[0].content, {
+        toast.success("😊 \n" + wishes[0].content, {
           position: "top-right",
           autoClose: 2500,
           hideProgressBar: true,
@@ -68,6 +69,7 @@ class RetrieveList extends Component {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
+          closeButton: false
         })
         console.log(wishes[0].content)
         this.setState({ persons: wishes })
@@ -75,7 +77,7 @@ class RetrieveList extends Component {
     })
   }
   PageToast() {
-    toast.dark("🦄 Copied", {
+    toast.dark("📝 Copied", {
       position: "top-right",
       autoClose: 900,
       hideProgressBar: true,
@@ -83,6 +85,8 @@ class RetrieveList extends Component {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
+      closeButton: false
+      
     })
   }
 
