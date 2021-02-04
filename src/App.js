@@ -58,18 +58,18 @@ class RetrieveList extends Component {
     const GET_USER = new URL(window.location.href).searchParams.get("name")
     axios.get("https://wishes-five.vercel.app/" + GET_USER).then(res => {
       const wishes = res.data
-        toast.success("😊 \n" + wishes[0].content, {
-          position: "top-right",
-          autoClose: 2500,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          closeButton: false,
-        })
-        console.log(wishes[0].content)
-        this.setState({ persons: wishes })
+      toast.success("😊 \n" + wishes[0].content, {
+        position: "top-right",
+        autoClose: 2500,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        closeButton: false,
+      })
+      console.log(wishes[0].content)
+      this.setState({ persons: wishes })
     })
   }
   PageToast() {
@@ -89,6 +89,15 @@ class RetrieveList extends Component {
     const wishername = this.state.persons.map(
       person => "💗 \n" + person.content + "\n 💗"
     )
+
+    const Whatsappshare =
+      "https://api.whatsapp.com/send?text=" + window.location.href
+    const Telegramshare =
+      "https://telegram.me/share/url?url=" +
+      window.location.href +
+      "&text=" +
+      wishername
+
     return (
       <section className="section">
         <HelmetProvider>
@@ -195,7 +204,6 @@ class RetrieveList extends Component {
                 </form>
                 <br />
               </div>
-              <br />
               <div className="buttons is-centered">
                 <ToastContainer />
                 <CopyToClipboard
@@ -203,7 +211,7 @@ class RetrieveList extends Component {
                   onCopy={() => this.setState({ copied: true })}
                 >
                   <button
-                    className="button is-link read-random"
+                    className="button is-danger read-random"
                     onClick={this.PageToast}
                     disabled={this.state.isLoading}
                   >
@@ -211,7 +219,25 @@ class RetrieveList extends Component {
                   </button>
                 </CopyToClipboard>
               </div>
-              <br />
+              <hr />
+              <div className="buttons is-centered">
+                <a
+                  className="button is-success read-random"
+                  href={Whatsappshare}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                >
+                  🍔 Whatsapp
+                </a>
+                <a
+                  className="button is-info read-random"
+                  href={Telegramshare}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                >
+                  🤖 Telegram
+                </a>
+              </div>
               <br />
             </div>
           </div>
