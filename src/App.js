@@ -120,6 +120,35 @@ class RetrieveList extends Component {
             <link rel="canonical" href={window.location.href} />
             <meta name="twitter:url" content={window.location.href} />
             <meta property="og:url" content={window.location.href} />
+            <script type="application/ld+json">{`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "publisher": {
+                "@type": "Organization",
+                "name": "${wishername} Valentines day wishes For you 💗",
+                "url": "${window.location.href}",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://wishes.santhoshveer.com/logo.png",
+                  "width": 60,
+                  "height": 60
+                }
+              },
+              "url": "${window.location.href}",
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://wishes.santhoshveer.com/sanwishes-cover.png",
+                "width": 1280,
+                "height": 720
+              },
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "${window.location.href}"
+              },
+              "description": "Valentines day wishes 💗 - Your smile make me the happiest person alive."
+            }
+            `}</script>
           </Helmet>
         </HelmetProvider>
         <div className="container content">
