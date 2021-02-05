@@ -24,7 +24,7 @@
     "react-form-input-validation": "^2.0.5",
     "react-helmet-async": "^1.0.7",
     "react-scripts": "4.0.2",
-    "react-toastify": "^7.0.2",
+    "react-toastify": "^7.0.3",
     "react-typist": "^2.0.5",
     "slugify": "^1.4.6",
     "web-vitals": "^1.1.0",
