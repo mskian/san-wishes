@@ -88,13 +88,16 @@ class RetrieveList extends Component {
 
   render() {
     const wishername = this.state.persons.map(person => person.content)
-    const Whatsappshare =
-      "https://api.whatsapp.com/send?text=" + window.location.href
+    const sharetext = encodeURIComponent(
+      wishername + "\n Valentines day wishes For you \n" + window.location.href
+    )
+    const Whatsappshare = "https://api.whatsapp.com/send?text=" + sharetext
     const Telegramshare =
       "https://telegram.me/share/url?url=" +
       window.location.href +
       "&text=" +
-      wishername
+      wishername +
+      " Valentines day wishes For you"
 
     return (
       <section className="section">
