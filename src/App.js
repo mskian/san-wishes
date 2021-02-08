@@ -19,6 +19,7 @@ class RetrieveList extends Component {
         name: "",
       },
       errors: {},
+      isLoading: true,
       persons: [],
     }
     this.form = new ReactFormInputValidation(this)
@@ -69,7 +70,7 @@ class RetrieveList extends Component {
         closeButton: false,
       })
       console.log(wishes[0].content)
-      this.setState({ persons: wishes })
+      this.setState({ isLoading: false, persons: wishes })
     })
   }
   PageToast() {
@@ -86,10 +87,7 @@ class RetrieveList extends Component {
   }
 
   render() {
-    const wishername = this.state.persons.map(
-      person => "💗 \n" + person.content + "\n 💗"
-    )
-
+    const wishername = this.state.persons.map(person => person.content)
     const Whatsappshare =
       "https://api.whatsapp.com/send?text=" + window.location.href
     const Telegramshare =
@@ -149,6 +147,24 @@ class RetrieveList extends Component {
               "description": "Valentines day wishes 💗 - Your smile make me the happiest person alive."
             }
             `}</script>
+            <script
+              async
+              src="https://www.googletagmanager.com/gtag/js?id=G-D345QYEV7K"
+            ></script>
+            <script>
+              {`
+              if(true) {
+               window.dataLayer = window.dataLayer || [];
+               function gtag(){dataLayer.push(arguments);}
+               gtag('js', new Date());
+          
+               gtag('config', 'G-D345QYEV7K', {
+                 'page_title' : '${wishername} Valentines day wishes For you 💗',
+                 'page_location': '${window.location.href}'
+               });
+              }
+            `}
+            </script>
           </Helmet>
         </HelmetProvider>
         <div className="container content">
@@ -168,7 +184,10 @@ class RetrieveList extends Component {
                 </h1>
                 <br />
                 <Bounce>
-                  <p className="has-text-centered">{wishername}</p>
+                  <p className="has-text-centered">
+                    {this.state.isLoading ? "" : "💚"} {wishername}{" "}
+                    {this.state.isLoading ? "" : "💚"}
+                  </p>
                 </Bounce>
               </Slide>
               <br />

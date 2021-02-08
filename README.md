@@ -16,6 +16,7 @@ This is My Personal Wishing Site - Share the Festival Wishes via Web link
 - Bulma CSS
 - Festival Wishing Name Generator API
 - Power Packed with React Modules
+- Google Analytics V4
 
 ## API 🍪
 
