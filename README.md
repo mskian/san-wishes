@@ -6,7 +6,7 @@ San Wishes - A Simple Wishing site Built using React.
 
 ⚛ React | ⚡ Speed | ☁ Offline | 🌩 PWA
 
-This is My Personal Wishing Site - Share the Festival Wishes via Web link
+Specially Made for Valentine's Day Wishes ❤
 
 ## Features 🍔
 

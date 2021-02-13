@@ -1,5 +1,8 @@
 # Netlify redirects file, edit with your domain
 # https://www.netlify.com/docs/redirects/
 
-https://sanwishes.netlify.app/* https://wishes.santhoshveer.com/:splat 301!
-http://sanwishes.netlify.app/* https:/wishes.santhoshveer.com/:splat 301!
+https://sanwishes.netlify.app/* https://love.sanweb.info/:splat 301!
+http://sanwishes.netlify.app/* https://love.sanweb.info/:splat 301!
+
+https://wishes.santhoshveer.com/* https://love.sanweb.info/:splat 301!
+http://wishes.santhoshveer.com/* https://love.sanweb.info/:splat 301!

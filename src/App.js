@@ -10,6 +10,7 @@ import Typist from "react-typist"
 import slugify from "slugify"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import { Helmet, HelmetProvider } from "react-helmet-async"
+import sitedata from "./config.json"
 
 class RetrieveList extends Component {
   constructor(props) {
@@ -57,7 +58,7 @@ class RetrieveList extends Component {
       })
     }
     const GET_USER = new URL(window.location.href).searchParams.get("name")
-    axios.get("https://wishes-five.vercel.app/" + GET_USER).then(res => {
+    axios.get(sitedata.apiurl + GET_USER).then(res => {
       const wishes = res.data
       toast.success("😊 \n" + wishes[0].content, {
         position: "top-right",
@@ -131,7 +132,7 @@ class RetrieveList extends Component {
                 "url": "${window.location.href}",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://wishes.santhoshveer.com/logo.png",
+                  "url": "${sitedata.siteurl}/logo.png",
                   "width": 60,
                   "height": 60
                 }
@@ -139,7 +140,7 @@ class RetrieveList extends Component {
               "url": "${window.location.href}",
               "image": {
                 "@type": "ImageObject",
-                "url": "https://wishes.santhoshveer.com/sanwishes-cover.png",
+                "url": "${sitedata.siteurl}/sanwishes-cover.png",
                 "width": 1280,
                 "height": 720
               },
@@ -152,7 +153,7 @@ class RetrieveList extends Component {
             `}</script>
             <script
               async
-              src="https://www.googletagmanager.com/gtag/js?id=G-D345QYEV7K"
+              src="https://www.googletagmanager.com/gtag/js?id=G-EHEB5DM5VW"
             ></script>
             <script>
               {`
@@ -161,7 +162,7 @@ class RetrieveList extends Component {
                function gtag(){dataLayer.push(arguments);}
                gtag('js', new Date());
           
-               gtag('config', 'G-D345QYEV7K', {
+               gtag('config', 'G-EHEB5DM5VW', {
                  'page_title' : '${wishername} Valentines day wishes For you 💗',
                  'page_location': '${window.location.href}'
                });
