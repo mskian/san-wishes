@@ -15,7 +15,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
-    "axios": "^0.21.2",
+    "axios": "^0.21.3",
     "bulma": "^0.9.3",
     "react": "^17.0.2",
     "react-awesome-reveal": "^3.8.1",
