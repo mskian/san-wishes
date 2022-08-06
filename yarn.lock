@@ -8281,12 +8281,12 @@ react-fast-compare@^3.2.0:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
   integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
 
-react-form-input-validation@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/react-form-input-validation/-/react-form-input-validation-2.0.5.tgz#e19b0caac88d21fbe302cd112d26eaed459f2ad4"
-  integrity sha512-YyBjXsTlPqTS6d/t4a/ZBJccOn1afskrURZmqpiJoZFVsB3mNHIo1MwTrsbDyjkthFYIJ6ttc3su65sfSLKi2Q==
+react-form-input-validation@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-form-input-validation/-/react-form-input-validation-2.1.0.tgz#09188bf24f8d56056ee72f96204f11a5ddc82dd6"
+  integrity sha512-XQUoQd540ykxUkEuoakJXo55IXMzgBgLFsT81CjnQ9LTufgGibOyKyJ5ByPdfPotpRwHbdxURMU5b9rq+8Vj4Q==
   dependencies:
-    validatorjs "^3.18.1"
+    validatorjs "^3.22.1"
 
 react-helmet-async@^1.3.0:
   version "1.3.0"
@@ -9652,7 +9652,7 @@ v8-to-istanbul@^8.1.0:
     convert-source-map "^1.6.0"
     source-map "^0.7.3"
 
-validatorjs@^3.18.1:
+validatorjs@^3.22.1:
   version "3.22.1"
   resolved "https://registry.yarnpkg.com/validatorjs/-/validatorjs-3.22.1.tgz#13dbbe6556cf4ab87759105d13b1d31a9a54ce54"
   integrity sha512-451KiCt/3E8qV/8fOUdO0YkA8zUdQBNVxubg9jvgEB+JAg9IlRKrClzwq2ir2ndj7TWmPYQ7bXFb4BxcyX2iWw==
