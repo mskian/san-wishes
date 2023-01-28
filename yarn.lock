@@ -8291,10 +8291,10 @@ react-app-polyfill@^3.0.0:
     regenerator-runtime "^0.13.9"
     whatwg-fetch "^3.6.2"
 
-react-awesome-reveal@^4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/react-awesome-reveal/-/react-awesome-reveal-4.2.2.tgz#b248b46d38d231be8e25eb0f1ad0ea13c6d0ea1a"
-  integrity sha512-XiXB51QYsizaE7S8fjvwXo5FktcTyE0o28DPWNkaFIAXDVub4mz2Pt8trZnNkhdbh1vYE8Xj37Z/3gL9VYUq6A==
+react-awesome-reveal@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/react-awesome-reveal/-/react-awesome-reveal-4.2.3.tgz#129e85eee3b1ce522e09f8b06033cb1d233b95bb"
+  integrity sha512-wln5oVUw8qBTF0flLyHxbcDsM+fpYvcQZ0aih9YL1aK1CiVewEp7D/ltCsQ8lKQEsZ50udvmje4HPKxyiUDp8Q==
   dependencies:
     react-intersection-observer "^9.4.1"
     react-is "^18.2.0"
