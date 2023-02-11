@@ -51,7 +51,7 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "devDependencies": {
-    "prettier": "2.8.3"
+    "prettier": "2.8.4"
   },
   "eslintConfig": {
     "extends": [
